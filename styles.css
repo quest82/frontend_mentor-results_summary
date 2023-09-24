@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    --primary-light-red: hsla(0, 100%, 67%, .1);
+    --primary-orangey-yellow:hsla(39, 100%, 56%, .1);
+    --primary-green-teal: hsla(166, 100%, 37%, .1);
+    --primary--cobalt-blue: hsla(234, 85%, 45%, .1);
+    --gradient-background-1: hsl(252, 100%, 67%);
+    --gradient-background-2: hsl(241, 81%, 54%);
+    --gradient-circle-2: hsla(256, 72%, 46%, 1);
+    --gradient-circle-1: hsla(241, 72%, 46%, 0) ;
+    --text-white: hsl(0, 0%, 100%);
+    --text-red:hsl(0, 100%, 67%);
+    --text-orange: hsl(39, 100%, 56%);
+    --text-green: hsl(166, 100%, 37%);
+    --text-blue: hsl(234, 85%, 45%);
+    --text-lavender: hsl(241, 100%, 89%);
+    --text-slate-blue:hsl(224, 30%, 27%);
+    --button-dark-grey: hsl(224, 30%, 27%);
+    --button-active:hsl(241, 81%, 54%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;~    font-size: 16px;
+    background-color: azure;
+}
+
+.mainContainer_flex{
+    margin-bottom: 3em;
+}
+
+/* Typography */
+
+.top_text,
+.score,
+.bottom_bold,
+.memory_text,
+.reaction_text,
+.verbal_text,
+.visual_text{
+    font-weight: 700;
+}
+
+/* ---- Flex_1---- */
+
+.inside_text,
+.top_text,
+.bottom_text{
+    color: var(--text-lavender);
+}
+
+.top_text{
+    margin-bottom: 1.3em;
+}
+
+.score{
+    font-size: 4em;
+}
+
+.bottom_bold{
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+.bottom_text{
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+/* ---- Flex_2 ---- */
+
+.title{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: var(--button-dark-grey);
+}
+
+.reaction_text{
+    color: var(--text-red);
+}
+
+.memory_text{
+    color: var(--text-orange);
+}
+
+.verbal_text{
+    color: var(--text-green);
+}
+
+.visual_text{
+    color: var(--text-blue);
+}
+
+b{
+    color: black;
+}
+
+.rating{
+    color: var(--text-slate-blue);
+}
+
+.btn{
+    text-decoration: none;
+    background-color: var(--button-dark-grey);
+    color: var(--text-white);
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    text-align: center;
+    padding: 1.3em 0;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: var(--button-active);
+}
+
+/* Top Section (Layout) */
+
+.flex_1{
+    padding: 1.7em 3em;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-right-radius:45px ;
+    border-bottom-left-radius:45px ;
+    background-image: linear-gradient(var(--gradient-background-1) 25%, var(--gradient-background-2) 75%);
+}
+
+.circular{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(var( --gradient-circle-2), var(--gradient-circle-1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+/* Bottom Section (Layout) */
+
+.flex_2{
+    padding: 0 1.7em;
+}
+
+.result_flex{
+    margin-bottom: 1em;
+    padding: 1.2em 1em;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result_info{
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    margin-right: 8px;
+}
+.reaction_box{
+    background-color: var(--primary-light-red);
+}
+
+.memory_box{
+    background-color: var(--primary-orangey-yellow);
+}
+
+.verbal_box{
+    background-color: var(--primary-green-teal);
+}
+
+.visual_box{
+    background-color: var(--primary--cobalt-blue);
+    margin-bottom: 2em;
+}
+
+/* Desktop */
+@media(min-width:760px){
+
+    .mainContainer_flex{
+        max-width: 750px;
+        margin: 4em auto;
+        background-color: var(--text-white);
+        display: flex;
+        border-radius: 45px;
+        overflow: hidden;
+    }
+
+    .flex_1,
+    .flex_2{
+        width: 50%;
+    }
+
+    .flex_1{
+        margin-bottom: 0;
+        border-top-right-radius: 45px;
+    }
+
+    .circular{
+        width:220px;
+        height: 220px;
+    }
+
+    .score{
+        font-size: 6em;
+    }
+
+    .flex_2{
+        padding: 2em 1.5em;
+    }
+
+    .attribution{
+        text-align: center;
+    }
+}
